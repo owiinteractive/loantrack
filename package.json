@@ -12,7 +12,7 @@
     "@ionic/pro": "1.0.20",
     "cordova-android": "7.0.0",
     "cordova-plugin-contacts": "^3.0.1",
-    "cordova-plugin-device": "^2.0.1",
+    "cordova-plugin-device": "^2.0.2",
     "cordova-plugin-ionic-keyboard": "^2.0.5",
     "cordova-plugin-ionic-webview": "^1.2.0",
     "cordova-plugin-splashscreen": "^5.0.2",
