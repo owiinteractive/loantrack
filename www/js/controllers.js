@@ -11,12 +11,12 @@ angular.module('starter.controllers', ['ngCordova'])
 
 })
 
-.controller('AddLoanController', function($scope, $ionicPlatform, $cordovaContacts) {
+.controller('AddLoanController', function($scope, $ionicPlatform) {
 
     $ionicPlatform.ready(function() {
-        $cordovaContacts.find({}).then(function(allContacts) {
-            $scope.contacts = allContacts;
-        });
+        $scope.contacts = [
+            {displayName: "Alex"}
+        ];
     });
 
 });
