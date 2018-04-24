@@ -1,4 +1,4 @@
-angular.module('starter.controllers', ['ngCordova'])
+angular.module('starter.controllers', ['ionic.native'])
 
 .controller('AppCtrl', function($scope, $ionicModal, $timeout) {
 
@@ -11,7 +11,7 @@ angular.module('starter.controllers', ['ngCordova'])
 
 })
 
-.controller('AddLoanController', function($scope, $ionicPlatform) {
+.controller('AddLoanController', function($scope, $ionicPlatform, $cordovaContacts) {
 
     $ionicPlatform.ready(function() {
         $scope.contacts = [
@@ -19,4 +19,11 @@ angular.module('starter.controllers', ['ngCordova'])
         ];
     });
 
+/*
+    $ionicPlatform.ready(function() {
+        $cordovaContacts.find({}).then(function(allContacts) {
+            $scope.contacts = allContacts;
+        });
+    });
+*/
 });
