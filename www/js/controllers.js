@@ -7,19 +7,30 @@ angular.module('starter.controllers', ['ionic.native'])
 
 })
 
-.controller('HomeController', function($scope) {
+.controller('HomeController', function($scope, $ionicPlatform, $cordovaDeviceMotion) {
+
+    $ionicPlatform.ready(function() {
+        $cordovaDeviceMotion.getCurrentAcceleration().then(function(acceleration) {
+            $scope.x = acceleration.x;
+            $scope.y = acceleration.y;
+            $scope.z = acceleration.z;
+        }), function() {
+            console.log("Failed to get acceleration");
+        }
+    });
 
 })
 
-.controller('AddLoanController', function($scope, $ionicPlatform, $cordovaContacts) {
+.controller('AddLoanController', function($scope, $ionicPlatform) {
 
+/*
     $ionicPlatform.ready(function() {
         $scope.contacts = [
             {displayName: "Alex"}
         ];
     });
 
-/*
+
     $ionicPlatform.ready(function() {
         $cordovaContacts.find({}).then(function(allContacts) {
             $scope.contacts = allContacts;
