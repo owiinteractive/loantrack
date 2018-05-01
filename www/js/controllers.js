@@ -23,18 +23,10 @@ angular.module('starter.controllers', ['ionic.native'])
 
 .controller('AddLoanController', function($scope, $ionicPlatform) {
 
-/*
-    $ionicPlatform.ready(function() {
-        $scope.contacts = [
-            {displayName: "Alex"}
-        ];
-    });
-
-
     $ionicPlatform.ready(function() {
         $cordovaContacts.find({}).then(function(allContacts) {
             $scope.contacts = allContacts;
         });
     });
-*/
+
 });
